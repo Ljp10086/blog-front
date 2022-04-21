@@ -1,0 +1,31 @@
+@import "@styles/vars.scss";
+@import "@styles/mixins.scss";
+
+.container {
+  width: 100%;
+
+  .wrapper {
+    @include app-width();
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: $padding-1 0;
+
+    .nav {
+      width: 100%;
+      display: flex;
+      column-gap: $padding-3 * 2;
+      font-weight: 500;
+      list-style: none;
+
+      .item {
+        @include link();
+
+        &.active {
+          @include link-active();
+        }
+      }
+    }
+
+  }
+}

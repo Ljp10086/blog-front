@@ -1,0 +1,43 @@
+@import '@styles/vars.scss';
+@import '@styles/mation.scss';
+
+@mixin app-width {
+  $less-width: 60px;
+  @each $_, $size in $media {
+    $max-width: $size - $less-width;
+    @media (min-width: $size) {
+      max-width: $max-width;
+    }
+  }
+}
+
+@mixin link($size: $text-2) {
+  color: var(--color-muted);
+  font-size: $size;
+  transition: color .2s ease-out;
+
+  &:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+  }
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin link-active {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    @include square($nav-active-dot-size);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    top: 50%;
+    left: -$nav-active-dot-size - $padding-3 / 1.75;
+    transform: translateY(-50%);
+    animation: shadow-pulse 1s infinite;
+  }
+}

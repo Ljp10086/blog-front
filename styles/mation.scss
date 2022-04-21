@@ -1,0 +1,10 @@
+@import '@styles/vars.scss';
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: $active-shadow-start;
+  }
+  100% {
+    box-shadow: $active-shadow-end;
+  }
+}
