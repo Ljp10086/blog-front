@@ -12,10 +12,29 @@ $media: (
   xl: $breakpoint-xl
 );
 
+$distinct-1: 4px;
+$distinct-2: 6px;
+$distinct-3: 8px;
+$distinct-4: 10px;
+$distinct-5: 12px;
+$distinct-6: 14px;
+$distinct-7: 16px;
+$distinct-8: 18px;
+$distinct-9: 20px;
+$distinct-10: 24px;
+$distinct-11: 26px;
+$distinct-12: 30px;
+$distinct-13: 34px;
+$distinct-14: 40px;
+
 $padding-1: 12px;
 $padding-2: 16px;
 $padding-3: 20px;
 $padding-4: 24px;
+$padding-5: 30px;
+$padding-6: 40px;
+$padding-7: 50px;
+$padding-8: 80px;
 
 $text-1: 12px;
 $text-2: 14px;
@@ -24,6 +43,8 @@ $text-4: 18px;
 $text-5: 20px;
 
 $nav-active-dot-size: 6px;
+
+$card-border-radius: 5px;
 
 $active-shadow-start: 0 0 0 0 var(--color-primary-start);
 $active-shadow-end: 0 0 0 $nav-active-dot-size var(--color-primary-end);

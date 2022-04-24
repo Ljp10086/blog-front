@@ -1,7 +1,7 @@
 :root { 
   --color-primary-start: #5869DA80;
   --color-primary-end: #5869DA00;
-
+  --color-bg: #f1f2f3;
   --color-mode: "light";
   --color-muted: #687385;
   --color-primary: #5869DA;
@@ -17,8 +17,12 @@
   --primary-border-color: #9b9b9b;
   --secondary-border-color: #f0f8ff;
   --mutted-border-color: #eaecee;
+  --default-font-color: #212529;
+
   --box-shadow-normal: 0 10px 10px rgba(0,0,0,0.08);
   --box-shadow-hover: 0 4px 60px 0 rgba(0,0,0,0.2);
   --button-shadow-color-normal: hsla(0,0%,42.4%,0.2);
   --button-shadow-color-hover: hsla(0,0%,42.4%,0.3);
+
+  color: var(--default-font-color);
 }

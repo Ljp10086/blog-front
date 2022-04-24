@@ -9,6 +9,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: $padding-1 0;
 
     .nav {
@@ -27,5 +28,14 @@
       }
     }
 
+    .right {
+      display: flex;
+      column-gap: $distinct-8;
+
+      .logo {
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
   }
 }

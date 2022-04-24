@@ -41,3 +41,9 @@
     animation: shadow-pulse 1s infinite;
   }
 }
+
+@mixin img-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}

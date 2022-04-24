@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './index.module.scss';
 import classnames from 'classnames';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 interface INav {}
 
@@ -54,6 +55,24 @@ const Nav: React.FC<INav> = (props) => {
 		<div className={styles['container']}>
 			<div className={styles['wrapper']}>
 				<ul className={styles['nav']}>{renderNavItems(routes)}</ul>
+				<div className={styles['right']}>
+					<a className={styles['logo']}>
+						<Image
+							width={24}
+							height={24}
+							src="/images/github.png"
+							alt="github"
+						></Image>
+					</a>
+					<a className={styles['logo']}>
+						<Image
+							width={24}
+							height={24}
+							src="/images/wechart.png"
+							alt="wechart"
+						></Image>
+					</a>
+				</div>
 			</div>
 		</div>
 	);

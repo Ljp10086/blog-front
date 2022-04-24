@@ -1,0 +1,40 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins.scss';
+
+.header-top {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--mutted-border-color);
+
+  .container {
+    @include app-width();
+    padding: $distinct-2 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 200px;
+      // @include square(100px);
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      column-gap: $distinct-12;
+
+      .search {
+        display: inline-flex;
+        align-items: center;
+        @include link();
+
+        > i {
+          font-size: $text-1;
+          margin-right: $distinct-2;
+        }
+      }
+    }
+
+  }
+}

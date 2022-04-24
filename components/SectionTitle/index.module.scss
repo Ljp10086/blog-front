@@ -1,0 +1,9 @@
+@import '@styles/mixins';
+@import '@styles/vars';
+
+.widget-header {
+  font-size: $text-2;
+  padding: $distinct-4 0;
+  border-bottom: 1px solid var(--mutted-border-color);
+  letter-spacing: 1px;
+}

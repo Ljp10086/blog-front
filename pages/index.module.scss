@@ -1,0 +1,42 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins.scss';
+
+.main {
+  .featured-1 {
+    width: 100%;
+    background-color: var(--color-bg);
+  
+    .container {
+      @include app-width();
+      padding: $padding-8 0;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+  
+      .tap {
+        font-size: $text-2;
+        margin-bottom: $distinct-8;
+      }
+  
+      .title {
+        font-size: 50px;
+        font-weight: bold;
+        margin-bottom: $distinct-5;
+      }
+  
+      .sub {
+        font-size: 42px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .featured-2 {
+    @include app-width();
+    padding: $distinct-8 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: $distinct-14;
+    margin: 0 auto;
+  }
+}
