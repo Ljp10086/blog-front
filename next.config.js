@@ -3,7 +3,7 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ['demo.mxyhn.xyz']
+		domains: ['demo.mxyhn.xyz', 'avatars.githubusercontent.com']
 	},
 	reactStrictMode: true,
 	webpack: (config, {}) => {

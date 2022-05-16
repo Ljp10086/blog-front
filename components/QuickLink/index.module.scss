@@ -1,0 +1,14 @@
+@import '@styles/mixins';
+@import '@styles/vars';
+
+.quick-link {
+  width: 100%;
+  padding-bottom: $distinct-5;
+  margin-bottom: $distinct-5;
+  border-bottom: 1px solid var(--mutted-border-color);
+  font-size: $text-1;
+
+  a {
+    @include link();
+  }
+}

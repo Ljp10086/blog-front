@@ -3,6 +3,7 @@ import styles from './index.module.scss';
 import classnames from 'classnames';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface INav {}
 
@@ -16,7 +17,7 @@ const routes = [
 		label: '文章'
 	},
 	{
-		path: '/message',
+		path: '/leave-message',
 		label: '留言'
 	},
 	{
@@ -33,10 +34,9 @@ type RouteConfig = typeof routes[0];
 
 const Nav: React.FC<INav> = (props) => {
 	const router = useRouter();
-
 	const getClasses = (route: RouteConfig) => {
 		const classes = classnames(styles['item'], {
-			[styles['active']]: router.asPath.startsWith(route.path)
+			[styles['active']]: router.asPath === route.path
 		});
 		return classes;
 	};
@@ -45,7 +45,7 @@ const Nav: React.FC<INav> = (props) => {
 		return routes.map((route) => {
 			return (
 				<li key={route.label} className={getClasses(route)}>
-					{route.label}
+					<Link href={route.path}>{route.label}</Link>
 				</li>
 			);
 		});

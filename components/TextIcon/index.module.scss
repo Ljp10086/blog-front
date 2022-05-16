@@ -1,0 +1,33 @@
+@import '@styles/mixins';
+@import '@styles/vars';
+
+.click {
+  @include link();
+}
+
+.text-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: $distinct-1;
+}
+
+.dot {
+  margin: 0 $distinct-8 0 0;
+  position: relative;
+  &::after {
+    $size: 3px;
+    content: "";
+    width: $size;
+    height: $size;
+    position: absolute;
+    top: 50%;
+    right: -($distinct-8 + $size) / 2;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+}
+
+.active {
+  color: var(--color-primary);
+}

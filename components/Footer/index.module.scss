@@ -11,20 +11,26 @@
     @include app-width();
     display: grid;
     gap: $distinct-12;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     .section {
       display: flex;
-      gap: $distinct-5;
       flex-direction: column;
-      column-gap: $distinct-8;
+      column-gap: $distinct-6;
 
       .content {
-        margin-bottom: $distinct-8;
+        margin-bottom: $distinct-12;
+        font-size: $text-2;
       }
 
       .logo {
         margin-right: $distinct-5;
+      }
+
+      .subtitle {
+        margin-bottom: $distinct-4;
+        font-size: $text-2;
+        font-weight: 700;
       }
     }
   }
@@ -34,7 +40,7 @@
   position: relative;
   font-size: $text-2;
   font-weight: 500;
-  margin-bottom: $distinct-12;
+  margin-bottom: $distinct-10;
   border-bottom: 1px solid var(--mutted-border-color);
   padding-bottom: $distinct-4;
 

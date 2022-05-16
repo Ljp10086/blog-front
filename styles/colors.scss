@@ -10,7 +10,7 @@
   --color-danger: #e3363e;
   --color-warning: #e38836;
   --color-info: #4da7d4;
-  --color-light: #f8f9f9;
+  // --color-light: #f8f9f9;
   --color-grey: #f7f8f9;
   --color-dark: #000c2d;
   --color-white: #FFFFFF;
@@ -18,11 +18,10 @@
   --secondary-border-color: #f0f8ff;
   --mutted-border-color: #eaecee;
   --default-font-color: #212529;
-
+  --dot-color: var(--primary-border-color);
   --box-shadow-normal: 0 10px 10px rgba(0,0,0,0.08);
   --box-shadow-hover: 0 4px 60px 0 rgba(0,0,0,0.2);
   --button-shadow-color-normal: hsla(0,0%,42.4%,0.2);
   --button-shadow-color-hover: hsla(0,0%,42.4%,0.3);
-
-  color: var(--default-font-color);
+  --color-light: #898b8f;
 }

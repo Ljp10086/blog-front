@@ -15,10 +15,10 @@
   color: var(--color-muted);
   font-size: $size;
   transition: color .2s ease-out;
+  cursor: pointer;
 
   &:hover {
     color: var(--color-primary);
-    cursor: pointer;
   }
 }
 

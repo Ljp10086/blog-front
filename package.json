@@ -9,16 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "axios": "^0.26.1",
     "classnames": "^2.3.1",
+    "dayjs": "^1.11.2",
     "next": "12.1.5",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-markdown": "^8.0.3",
+    "react-redux": "^8.0.1",
+    "redux-thunk": "^2.4.1",
+    "remark-gfm": "^3.0.1",
+    "use-immer": "^0.7.0"
   },
   "devDependencies": {
     "@types/node": "17.0.25",
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
+    "@types/react-redux": "^7.1.24",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "^8.5.0",

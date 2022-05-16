@@ -5,7 +5,7 @@
   .featured-1 {
     width: 100%;
     background-color: var(--color-bg);
-  
+    margin-bottom: $distinct-14;
     .container {
       @include app-width();
       padding: $padding-8 0;
@@ -33,10 +33,93 @@
 
   .featured-2 {
     @include app-width();
-    padding: $distinct-8 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: $distinct-14;
-    margin: 0 auto;
+    display: grid;
+    gap: $distinct-14;
+    grid-template-columns: 70% 1fr;
+    margin: 0 auto $distinct-14 auto;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      row-gap: $distinct-14;
+    }
+
+    .right {
+      .about-me {
+        border: 1px solid var(--mutted-border-color);
+        .card-bg {
+          position: relative;
+          width: 100%;
+          height: 150px;
+          background-image: url('/images/coding.gif');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          box-shadow: #fff 0 0 10px inset;
+          .piggies {
+            position: absolute;
+            bottom: $distinct-4;
+            left: 50%;
+            transform: translateX(-50%);
+            @include square(64px);
+            margin: auto auto 0;
+            display: block;
+            border: 1px solid var(--mutted-border-color);
+            border-radius: 50%;
+            background-image: url('/images/piggies.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+          }
+        }
+
+        .content {
+          $gap: $distinct-8;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: $gap;
+          align-items: center;
+          justify-content: center;
+          padding: $distinct-12 $distinct-12 $distinct-8 $distinct-12;
+
+          .item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .num {
+              font-size: $text-5;
+              margin-bottom: $distinct-2;
+            }
+            
+            .text {
+              font-size: $text-1;
+              color: var(--color-light);
+            }
+          }
+
+          .item:not(:last-child) {
+            &::after {
+              position: absolute;
+              top: 50%;
+              // 根据gap值水平居中
+              right: -($gap / 2);
+              transform: translateY(-50%);
+              content: "";
+              display: inline-block;
+              width: 1px;
+              height: 80%;
+              background-color: var(--color-grey);
+            }
+          }
+        }
+      }
+
+      .tags {
+        padding: $distinct-12;
+        border: 1px solid var(--mutted-border-color);
+      }
+    }
   }
 }
