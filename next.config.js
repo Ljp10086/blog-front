@@ -7,8 +7,8 @@ const nextConfig = {
 	},
 	reactStrictMode: true,
 	webpack: (config, {}) => {
-		config.resolve.alias['@styles'] = path.resolve(__dirname, 'styles');
-		config.resolve.alias['@'] = path.resolve(__dirname);
+		config.resolve.alias['@styles'] = path.resolve(__dirname, 'src/styles');
+		config.resolve.alias['@app'] = path.resolve(__dirname, 'src');
 		return config;
 	}
 };

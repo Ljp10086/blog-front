@@ -1,0 +1,40 @@
+@import '@styles/mixins';
+@import '@styles/vars';
+
+$itemWidth: 40px;
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: $distinct-4;
+  .item {
+    @include square($itemWidth);
+    display: inline-flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--color-pagination-default);
+    background-color: var(--color-white);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent;
+    transition: all .25s cubic-bezier(.02,.01,.47,1);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 8px var(--button-shadow-color-hover),0 0 0 transparent;
+    }
+
+    &.active {
+      color: var(--color-pagination-active);
+      background-color: var(--color-pagination-active-bg);
+    }
+
+    &.disabled {
+      color: var(--color-pagination-disabled);
+      background-color: var(--color-pagination-disabled-bg);
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+}

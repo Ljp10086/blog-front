@@ -1,0 +1,14 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins.scss';
+
+.container {
+  @include app-width();
+  margin: 0 auto;
+
+  .categories {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $distinct-10;
+  }
+}
