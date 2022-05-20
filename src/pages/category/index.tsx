@@ -1,9 +1,9 @@
-import CategoryCard from '@app/components/CategoryCard';
-import Pagination from '@app/components/Pagination';
-import MainLayout from '@app/layouts/Main';
+import CategoryCard from '../../components/CategoryCard';
+import Pagination from '../../components/Pagination';
+import MainLayout from '../../layouts/Main';
 import React, { useEffect } from 'react';
-import { categoryService } from '@app/services';
-import { ICategoryWithPage } from '@app/types/category.type';
+import { categoryService } from '../../services';
+import { ICategoryWithPage } from '../../types/category.type';
 import { useImmer } from 'use-immer';
 import styles from './index.module.scss';
 

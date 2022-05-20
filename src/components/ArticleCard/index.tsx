@@ -22,14 +22,15 @@ const ArticleCard: React.FC<IArticleCard> = (props) => {
 	return (
 		<div className={styles['container']}>
 			<div className={styles['left']}>
-				<a
-					style={{
-						backgroundImage: `url(${
-							article.coverPic ?? '/images/default.webp'
-						})`
-					}}
-					className={styles['img']}
-				></a>
+				<a className={styles['img']}>
+					<Image
+						src={article.coverPic ?? '/images/default.webp'}
+						width={100}
+						height={56}
+						layout="responsive"
+						alt={article.coverPic}
+					></Image>
+				</a>
 			</div>
 			<div className={styles['right']}>
 				<p className={styles['category']}>

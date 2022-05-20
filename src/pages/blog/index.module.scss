@@ -4,11 +4,13 @@
 .container {
   @include app-width();
   margin: 0 auto;
+  padding: $distinct-10 0;
 
-  .categories {
+  .articles {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: $distinct-10;
+    margin-bottom: $distinct-12;
   }
 }

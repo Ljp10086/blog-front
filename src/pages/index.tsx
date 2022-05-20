@@ -2,14 +2,14 @@ import classNames from 'classnames';
 import ArticleCard from 'src/components/ArticleCard';
 import Divider from 'src/components/Divider';
 import SectionTitle from 'src/components/SectionTitle';
-import { useAppSelector } from 'features/hooks';
-import MainLayout from 'layouts/Main';
+import { useAppSelector } from '../features/hooks';
+import MainLayout from '../layouts/Main';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { articlesService } from 'services';
-import { IArticle, IArticlesWithPage } from 'types/articles.type';
-import Like from 'types/like.enum';
+import { articlesService } from '../services';
+import { IArticle, IArticlesWithPage } from '../types/articles.type';
+import Like from '../types/like.enum';
 import { useImmer } from 'use-immer';
 import styles from './index.module.scss';
 
@@ -19,6 +19,7 @@ const Home: NextPage = () => {
 	const [pageNum, setPageNum] = useImmer(1);
 	const [articles, setArticles] = useImmer<IArticlesWithPage | null>(null);
 	const userInfo = useAppSelector((state) => state.user.data);
+
 	useEffect(() => {
 		getArticles();
 	}, []);

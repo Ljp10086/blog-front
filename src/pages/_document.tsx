@@ -18,7 +18,7 @@ class MyDocument extends Document {
 				<Head>
 					<link
 						rel="stylesheet"
-						href="https://at.alicdn.com/t/font_3348767_gmc8jeohmaj.css?spm=a313x.7781069.1998910419.112&file=font_3348767_gmc8jeohmaj.css"
+						href="https://at.alicdn.com/t/font_3348767_k8vlavwm30k.css?spm=a313x.7781069.1998910419.57&file=font_3348767_k8vlavwm30k.css"
 					/>
 				</Head>
 				<body>

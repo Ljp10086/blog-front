@@ -1,0 +1,35 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins.scss';
+
+.breadcrumbs {
+  margin-bottom: $distinct-14;
+
+  .title {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: $distinct-3;
+  }
+
+  .items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $distinct-10;
+
+    .item:not(:last-child) {
+      display: flex;
+      align-items: center;
+      @include link();
+
+      .icon {
+        font-size: $text-1;
+        margin: 0 $distinct-5;
+      }
+    }
+
+    .item:last-child {
+      .icon {
+        display: none;
+      }
+    }
+  }
+}
