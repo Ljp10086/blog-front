@@ -1,14 +1,8 @@
 import MainLayout from '../../layouts/Main';
-import {
-	GetServerSideProps,
-	GetStaticProps,
-	InferGetServerSidePropsType,
-	InferGetStaticPropsType
-} from 'next';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import remarkGfm from 'remark-gfm';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import { IArticle } from '../../types/articles.type';
 import styles from './index.module.scss';
 import mdStyles from './markdown.module.scss';
 import Image from 'next/image';
@@ -16,6 +10,7 @@ import Fetch from '../../httpHelper';
 import ReactMarkdown from 'react-markdown';
 import classNames from 'classnames';
 import { articlesService } from '../../services';
+import Markdown from 'src/components/Markdown';
 
 const BlogDetail = (
 	props: InferGetServerSidePropsType<typeof getServerSideProps>
@@ -41,11 +36,12 @@ const BlogDetail = (
 						></Image>
 					</div>
 					<div className={styles['content']}>
-						<article className={classNames(mdStyles['markdown-body'])}>
+						<Markdown>{article.contentMd}</Markdown>
+						{/* <article className={classNames(mdStyles['markdown-body'])}>
 							<ReactMarkdown remarkPlugins={[remarkGfm]}>
 								{article.contentMd}
 							</ReactMarkdown>
-						</article>
+						</article> */}
 
 						<div className={styles['tags-container']}>
 							标签：

@@ -4,35 +4,9 @@ import classnames from 'classnames';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
+import { routes } from 'src/routes';
 
 interface INav {}
-
-const routes = [
-	{
-		path: '/',
-		label: '首页'
-	},
-	{
-		path: '/blog',
-		label: '文章'
-	},
-	// {
-	// 	path: '/category',
-	// 	label: '分类'
-	// },
-	{
-		path: '/leave-message',
-		label: '留言'
-	},
-	// {
-	// 	path: '/timeline',
-	// 	label: '时间轴'
-	// },
-	{
-		path: '/about-me',
-		label: '关于我'
-	}
-];
 
 type RouteConfig = typeof routes[0];
 

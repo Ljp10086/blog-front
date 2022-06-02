@@ -4,6 +4,7 @@ import styles from './index.module.scss';
 import Image from 'next/image';
 import Title from './title';
 import QuickLink from 'src/components/QuickLink';
+import { routes } from 'src/routes';
 
 const Footer: React.FC = (props) => {
 	return (
@@ -38,11 +39,15 @@ const Footer: React.FC = (props) => {
 				</section>
 				<section className={styles['section']}>
 					<Title>快捷链接</Title>
-					<QuickLink>首页</QuickLink>
-					<QuickLink>文章</QuickLink>
+					{routes.map((route) => (
+						<QuickLink to={route.path} key={route.path}>
+							{route.label}
+						</QuickLink>
+					))}
+					{/* <QuickLink>文章</QuickLink>
 					<QuickLink>留言</QuickLink>
 					<QuickLink>时间轴</QuickLink>
-					<QuickLink>关于我</QuickLink>
+					<QuickLink>关于我</QuickLink> */}
 				</section>
 			</div>
 		</footer>

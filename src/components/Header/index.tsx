@@ -10,9 +10,9 @@ import { useAppDispatch, useAppSelector } from '../../features/hooks';
 import { addUserInfo } from '../../features/userSlice';
 
 const Header = () => {
-  const dispatch = useAppDispatch()
+	const dispatch = useAppDispatch();
 
-	const userInfo = useAppSelector(state => {
+	const userInfo = useAppSelector((state) => {
 		return state.user.data;
 	});
 

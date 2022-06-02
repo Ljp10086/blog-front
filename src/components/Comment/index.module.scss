@@ -1,0 +1,42 @@
+@import '@styles/mixins';
+@import '@styles/vars';
+
+.container {
+  display: flex;
+  padding-top: $distinct-10;
+
+  .left {
+    margin-right: $distinct-5;
+    .avatar {
+      @include img-container();
+      width: $avatarSize;
+      height: $avatarSize;
+      border-radius: 50%;
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    .title {
+      font-size: $text-1;
+      color: var(--color-muted);
+      margin-bottom: $distinct-2;
+
+      .replay {
+        color: var(--default-font-color);
+        margin: 0 $distinct-4;
+      }
+    }
+
+    .content {
+      font-size: $text-2;
+      margin-bottom: $distinct-5;
+    }
+
+    .reply {
+      @include link();
+      font-size: $text-1;
+    }
+  }
+}

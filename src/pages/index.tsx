@@ -7,7 +7,7 @@ import MainLayout from '../layouts/Main';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { articlesService } from '../services';
+import { articlesService, tagService } from '../services';
 import { IArticle, IArticlesWithPage } from '../types/articles.type';
 import Like from '../types/like.enum';
 import { useImmer } from 'use-immer';
@@ -78,7 +78,6 @@ const Home: NextPage = () => {
 					</div>
 				</section>
 				<div className={styles['featured-2']}>
-					{/* <div className={styles['left']}> */}
 					<div className={styles['left']}>
 						<SectionTitle>最新文章</SectionTitle>
 						{articles?.list.map((article) => (
@@ -115,5 +114,30 @@ const Home: NextPage = () => {
 		</MainLayout>
 	);
 };
+
+// export const getStaticProps = async () => {
+// 	const articlesWithCount = articlesService.getArticlesByPage({
+// 		pageNum: 1,
+// 		pageSize: 5
+// 	});
+
+// 	const tagsWithCount = tagService.getTagsByPage({
+// 		pageNum: 1,
+// 		pageSize: 5
+// 	});
+
+// 	const [articlesWithJson, tagsWithJson] = await Promise.all([
+// 		articlesWithCount,
+// 		tagsWithCount
+// 	]);
+
+// 	const [articles, tags];
+
+// 	return {
+// 		props: {
+// 			mdContent
+// 		}
+// 	};
+// };
 
 export default Home;
